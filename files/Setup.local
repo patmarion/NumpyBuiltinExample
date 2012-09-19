@@ -1,0 +1,30 @@
+# Edit this file for local setup changes
+
+cStringIO cStringIO.c
+cPickle cPickle.c
+_collections _collectionsmodule.c
+operator operator.c
+itertools itertoolsmodule.c
+_functools _functoolsmodule.c
+time timemodule.c
+math mathmodule.c _math.c
+
+
+# not required, but loaded if found:
+
+_bisect _bisectmodule.c
+#_ctypes _ctypes/_ctypes.c #hmm, need to include ffi.h but not sure which one
+_heapq _heapqmodule.c
+_struct _struct.c
+grp grpmodule.c
+strop stropmodule.c
+
+
+
+#array arraymodule.c	# array objects
+#cmath cmathmodule.c _math.c # -lm # complex math library functions
+#_testcapi _testcapimodule.c    # Python C API test module
+#_random _randommodule.c	# Random number generator
+#_elementtree -I$(srcdir)/Modules/expat -DHAVE_EXPAT_CONFIG_H -DUSE_PYEXPAT_CAPI _elementtree.c	# elementtree accelerator
+#_pickle _pickle.c	# pickle accelerator
+#datetime datetimemodule.c	# date/time type

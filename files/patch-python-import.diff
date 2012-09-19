@@ -1,0 +1,15 @@
+--- Python/import.c
++++ Python/import.c
+@@ -1261,6 +1261,12 @@
+         Py_DECREF(meta_path);
+     }
+ 
++    if (fullname != NULL && is_builtin(fullname)) {
++        _Py_PackageContext = fullname;
++        strcpy(buf, fullname);
++        return &fd_builtin;
++    }
++
+     if (path != NULL && PyString_Check(path)) {
+         /* The only type of submodule allowed inside a "frozen"
+            package are other frozen modules or packages. */
