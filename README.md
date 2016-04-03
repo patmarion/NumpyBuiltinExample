@@ -97,3 +97,13 @@ that are placed in the build output directory, for example:
 Other libraries you might need to add are /usr/lib/libcblas.a and
 /usr/lib/libatlas.a, and note that the order that .a library files are
 listed does matter.
+
+Slither
+-------
+
+Another project you may be interested in is Slither. Whereas this
+project, NumpyBuiltinExample, attempts to provide a minimal example,
+Slither is an automated tool to help you build frozen programs with
+numpy:
+
+    https://github.com/bfroehle/slither
