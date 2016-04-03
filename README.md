@@ -49,13 +49,17 @@ output will be placed in a new directory named 'build'.
 Blas and Lapack
 ---------------
 
+If you don't have blas installed, then numpy won't attempt to build
+the dotblas module.  In that case, you should edit the file
+`files/helloNumpy/numpy_builtin.h` and comment out the lines
+mentioning dotblas.
+
 If blas and lapack are installed on the system, then numpy will be
 configured with blas and lapack support.  That adds a required link
 dependency on those libraries.  Edit run.sh and you'll find a variable
 named requiredBlasLibrary.  For macosx, it is set to a default value,
 but for linux it is empty.  You have to fill that in for your system.
-On my Ubuntu 14 system, and is the value that worked for
-me:
+On my Ubuntu 14 system, this is the value that worked for me:
 
     requiredBlasLibrary="/usr/lib/liblapack.a /usr/lib/libblas.a /usr/lib/gcc/x86_64-linux-gnu/4.8/libgfortran.a"
 
