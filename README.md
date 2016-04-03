@@ -110,4 +110,4 @@ project, NumpyBuiltinExample, attempts to provide a minimal example,
 Slither is an automated tool to help you build frozen programs with
 numpy:
 
-    https://github.com/bfroehle/slither
+https://github.com/bfroehle/slither
